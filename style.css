@@ -30,14 +30,16 @@ main {
 @media (min-width: 800px) {
   .grid_1-1-1 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 20px;
   }
 }
 
 .product_list_container {
-  display: block;
-  padding: 30px;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  gap: 0;
   text-decoration: none;
   color: rgb(0, 0, 0);
   border-radius: 10px;
@@ -49,6 +51,14 @@ main {
 @media (min-width: 800px) {
   .grid_1-1-1-1 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .product_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
