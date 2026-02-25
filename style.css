@@ -11,8 +11,19 @@ img {
 
 main {
   padding: 50px;
+  font-family: "Roboto", sans-serif;
 }
 
+header img {
+  padding-left: 50px;
+  padding-top: 20px;
+  width: 300px;
+}
+
+.overskift {
+  padding-bottom: 20px;
+  font-size: 28px;
+}
 /* Index Start*/
 .grid_1-1-1 {
   display: grid;
@@ -22,11 +33,12 @@ main {
 
 .category_list_container {
   display: block;
-  padding: 30px;
+  padding: 40px;
   background-color: rgb(132, 131, 131);
   text-decoration: none;
   color: rgb(236, 236, 236);
   border-radius: 10px;
+  font-size: 20px;
 }
 
 @media (min-width: 800px) {
