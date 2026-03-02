@@ -20,10 +20,6 @@ header img {
   width: 300px;
 }
 
-.overskift {
-  padding-bottom: 20px;
-  font-size: 28px;
-}
 /* Index Start*/
 .grid_1-1-1 {
   display: grid;
@@ -51,7 +47,7 @@ header img {
 
 /* Index Slut*/
 
-/* Product list Start*/
+/* Productlist Start*/
 
 .subtle {
   color: red;
@@ -60,69 +56,20 @@ header img {
 @media (min-width: 800px) {
   #mainContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
   }
 }
 
-/* Product list Slut*/
+/* Productlist Slut*/
 
-/* Product Start*/
+/* Productdetails Start*/
 
 @media (min-width: 800px) {
-  .product_grid {
+  #productContainer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
-
-  .p_img img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .p_info {
-    padding: 2rem;
-  }
-
-  .p_info h2 {
-    padding-bottom: 20px;
-    font-size: 43px;
-  }
-
-  .p_info h3 {
-    font-size: 22px;
-  }
-
-  .p_info p {
-    padding-bottom: 10px;
-    padding-left: 20px;
-    font-size: 20px;
-  }
-
-  .p_form {
-    background-color: rgb(195, 195, 195);
-    color: white;
-    padding: 2rem;
-  }
-
-  .p_form h2 {
-    padding-bottom: 20px;
-    font-size: 43px;
-  }
-
-  .p_form p {
-    padding-bottom: 20px;
-    font-size: 20px;
-  }
-
-  .p_form button {
-    padding-bottom: 20px;
-    color: black;
-    padding: 6px 30px;
-    border-radius: 5px;
-    border-style: none;
-    cursor: pointer;
-  }
 }
 
-/* Product Slut*/
+/* Productdetails Slut*/

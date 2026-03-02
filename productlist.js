@@ -15,11 +15,8 @@ function showProducts(products) {
 
   products.forEach((product) => {
     markup += `
-    <a href="productdetails.html?id=${product.id}">
-      <article class="smallProduct 
-        ${product.soldout ? "soldOut" : ""} 
-        ${product.discount ? "onSale" : ""}">
-        
+      <article class="smallProduct">
+   <a href="productdetails.html?id=${product.id}">
         <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" 
              alt="${product.productdisplayname}" />
 

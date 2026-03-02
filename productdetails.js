@@ -17,11 +17,11 @@ function showData(json) {
 <span class="saleLabel"></span>
   </figure>
   <section class="productDetails">
-  <h2 class="productName>${json.productdisplayname}</h2>
+  <h2 class="productName">${json.productdisplayname}</h2>
   <div>
-  <p class="articleType"><span class="bold">Type:</span> Caps</p>
-  <p class="productCategory"><span class="bold">Kategori:</span> Accessories</p>
-  <p class="productPrice"><span class="bold">Pris:</span> 699,-</p>
+  <p class="articleType"><span class="bold">Type:</span> ${json.articletype}</p>
+  <p class="productCategory"><span class="bold">Kategori:</span> ${json.category}</p>
+  <p class="productPrice"><span class="bold">Pris:</span> ${json.price}</p>
   <p class="stock"><span class="bold">Stock:</span> 5</p>
   </div>
   <button class= "buyButton">Køb nu</button>
