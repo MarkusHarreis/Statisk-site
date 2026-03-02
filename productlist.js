@@ -1,5 +1,8 @@
-const listcontainer = document.querySelector(".grid_1-1-1-1");
-const endpoint = "https://kea-alt-del.dk/t7/api/products";
+const klikKategori = new URLSearchParams(window.location.search);
+const endpoint = `https://kea-alt-del.dk/t7/api/products?${klikKategori}`;
+console.log(endpoint);
+
+const listcontainer = document.querySelector("main");
 
 function getData() {
   fetch(endpoint)
@@ -12,6 +15,7 @@ function showProducts(products) {
 
   products.forEach((product) => {
     markup += `
+    <a href="productdetails.html?id=${product.id}">
       <article class="smallProduct 
         ${product.soldout ? "soldOut" : ""} 
         ${product.discount ? "onSale" : ""}">

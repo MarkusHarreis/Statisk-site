@@ -53,24 +53,14 @@ header img {
 
 /* Product list Start*/
 
-.product_list_container {
-  display: grid;
-  grid-template-rows: subgrid;
-  grid-row: span 3;
-  gap: 0;
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  border-radius: 10px;
-}
-.grid_1-1-1-1 {
-  gap: 20px;
+.subtle {
+  color: red;
 }
 
 @media (min-width: 800px) {
-  .grid_1-1-1-1 {
+  #mainContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 
@@ -136,31 +126,3 @@ header img {
 }
 
 /* Product Slut*/
-
-.wrapper {
-  display: flex;
-}
-
-.procent {
-  margin-left: auto;
-  background-color: red;
-  padding: 2px;
-}
-
-.old-price,
-.new-price {
-  display: block;
-}
-
-.amount {
-  text-decoration: line-through;
-  color: red;
-}
-
-.sold-out {
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.333);
-  padding: 16px;
-  font-size: 18px;
-  color: white;
-}
