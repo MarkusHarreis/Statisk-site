@@ -49,8 +49,25 @@ header img {
 
 /* Productlist Start*/
 
+.smallProduct a {
+  text-decoration: none;
+  color: black;
+}
+.hide {
+  display: none;
+}
 .subtle {
-  color: red;
+  color: rgb(128, 125, 125);
+}
+
+.discount {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tilbud {
+  background-color: rgb(250, 57, 57);
+  padding: 2px;
 }
 
 @media (min-width: 800px) {
