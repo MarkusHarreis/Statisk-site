@@ -20,6 +20,35 @@ header img {
   width: 300px;
 }
 
+.back {
+  padding: 14px;
+  width: 100px;
+  font-size: 15px;
+  border-style: none;
+  background-color: rgb(192, 188, 188);
+  border-radius: 4px;
+  text-decoration: none;
+  color: black;
+  margin-left: auto;
+  margin-right: 50px;
+  text-align: center;
+}
+
+.back_det {
+  padding: 14px;
+  width: 100px;
+  font-size: 15px;
+  border-style: none;
+  background-color: rgb(192, 188, 188);
+  border-radius: 4px;
+  text-decoration: none;
+  color: black;
+  margin-left: auto;
+  margin-right: 50px;
+  display: flex;
+  text-align: center;
+}
+
 /* Index Start*/
 .grid_1-1-1 {
   display: grid;
@@ -30,7 +59,7 @@ header img {
 .category_list_container {
   display: block;
   padding: 40px;
-  background-color: rgb(132, 131, 131);
+  background-color: rgb(192, 188, 188);
   text-decoration: none;
   color: rgb(236, 236, 236);
   border-radius: 10px;
@@ -49,6 +78,22 @@ header img {
 
 /* Productlist Start*/
 
+.filterBtn button {
+  padding: 14px;
+  margin: 10px;
+  width: 100px;
+  font-size: 15px;
+  border-style: none;
+  background-color: rgb(192, 188, 188);
+  border-radius: 4px;
+}
+
+.filterBtn {
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  gap: 20px;
+}
 .smallProduct a {
   text-decoration: none;
   color: black;
