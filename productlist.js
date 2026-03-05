@@ -72,7 +72,7 @@ function showProducts(products) {
 
         <p class="subtle">${product.brandname}</p>
 
-        <p class="price">
+        <p class="price ${product.discount ? "oldPrice" : ""}">
           DKK <span>${product.price}</span>,-
         </p>
         <div class=${product.discount ? "discount" : "hide"}>
