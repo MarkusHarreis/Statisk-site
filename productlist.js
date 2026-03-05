@@ -5,28 +5,57 @@ console.log(endpoint);
 const listcontainer = document.querySelector("main");
 
 document
-  .querySelectorAll("button")
+  .querySelectorAll(".filterBtn button")
   .forEach((knap) => knap.addEventListener("click", filter));
 
+document
+  .querySelectorAll("#sorter button")
+  .forEach((knap) => knap.addEventListener("click", sorter));
+
 let allData;
+let udsnit;
 
 function getData() {
   fetch(endpoint)
     .then((response) => response.json())
     .then((data) => {
-      allData = data;
+      allData = udsnit = data;
       showProducts(allData);
     });
 }
 
-function filter(e) {
-  const valgt = e.target.textContent;
-  if (valgt == "All") {
-    showProducts(allData);
+function sorter(e) {
+  if (e.target.dataset.price) {
+    const dir = e.target.dataset.price;
+    if (dir == "up") {
+      udsnit.sort((a, b) => a.price - b.price);
+    } else {
+      udsnit.sort((a, b) => b.price - a.price);
+    }
   } else {
-    const udsnit = allData.filter((element) => element.gender == valgt);
-    showProducts(udsnit);
+    const dir = e.target.dataset.text;
+    if (dir == "az") {
+      udsnit.sort((a, b) =>
+        a.productdisplayname.localeCompare(b.productdisplayname, "da"),
+      );
+    } else {
+      udsnit.sort((a, b) =>
+        b.productdisplayname.localeCompare(a.productdisplayname, "da"),
+      );
+    }
   }
+  showProducts(udsnit);
+}
+
+function filter(e) {
+  const valgt = e.target.textContent.trim();
+
+  if (valgt === "All") {
+    udsnit = [...allData];
+  } else {
+    udsnit = allData.filter((element) => element.gender === valgt);
+  }
+  showProducts(udsnit);
 }
 
 function showProducts(products) {
