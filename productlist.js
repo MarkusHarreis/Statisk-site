@@ -4,15 +4,34 @@ console.log(endpoint);
 
 const listcontainer = document.querySelector("main");
 
+document
+  .querySelectorAll("button")
+  .forEach((knap) => knap.addEventListener("click", filter));
+
+let allData;
+
 function getData() {
   fetch(endpoint)
     .then((response) => response.json())
-    .then(showProducts);
+    .then((data) => {
+      allData = data;
+      showProducts(allData);
+    });
+}
+
+function filter(e) {
+  const valgt = e.target.textContent;
+  if (valgt == "All") {
+    showProducts(allData);
+  } else {
+    const udsnit = allData.filter((element) => element.gender == valgt);
+    showProducts(udsnit);
+  }
 }
 
 function showProducts(products) {
   let markup = "";
-
+  console.log(products);
   products.forEach((product) => {
     markup += `
       <article class="smallProduct ${product.soldout && "soldOut"}">
